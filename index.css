@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  max-width: 100vw;
+  font-family: "Belanosima", sans-serif;
+  font-family: "Heebo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgba(0, 84, 240, 0.392);
+}
+
+#main,
+#mainFind {
+  display: grid;
+  height: fit-content;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#navbar {
+  height: fit-content;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 8.5em 16em 5em 1fr;
+  width: 100vw;
+  height: 10em;
+  background-color: cornflowerblue;
+}
+
+#resultBox {
+  grid-column: 1;
+  grid-row: 2/6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 30vw;
+  margin-left: 10px;
+}
+
+#contentBox {
+  grid-column: 2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-right: 10px;
+}
+#webStore {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+}
+
+#canvasChart {
+  grid-column: 2;
+  grid-row: 3/4;
+  width: 40em;
+  margin-top: 10em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+}
+
+#idNo {
+  font-size: x-small;
+}
+
+#showCities {
+  grid-column: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 60vw;
+  margin: 10px;
+}
+#resultStations {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 60vw;
+  margin: 10px;
+}
+
+#resultBox > div,
+#resultStations > div,
+#showCities > div {
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+  width: 12em;
+  padding: 1em;
+  overflow: scroll;
+}
+
+#infoText {
+  background-color: white;
+  grid-column: 1;
+  position: absolute;
+  top: 4em;
+  left: 10px;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  width: 15em;
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+  display: none;
+}
+
+#images {
+  margin-right: 10px;
+  border-radius: 20px;
+  max-height: 600px;
+}
+
+#name {
+  font-weight: 700;
+  border-bottom: 2px dotted black;
+}
+
+a {
+  color: crimson;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: cornflowerblue;
+}
+
+#searchSection {
+  margin: 1em;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#myMenu,
+#search-Ps {
+  grid-column: 1;
+  width: 10em;
+  height: 2em;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: "Heebo", sans-serif;
+}
+#search-Ps-Section {
+  grid-column: 1;
+  grid-row: 1;
+}
+#search {
+  width: 5em;
+  height: 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  font-family: "Heebo", sans-serif;
+}
+
+#police {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: rgb(0, 0, 0);
+}
+
+#events {
+  grid-column: 2;
+  grid-row: 1;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: powderblue;
+}
+
+#policeImg {
+  grid-column: 3;
+  grid-row: 1;
+  margin-left: 10px;
+  height: 4.5em;
+}
+#siteMenu1 > a,
+#siteMenu2 > a,
+#siteMenu3 > a {
+  font-size: smaller;
+  color: black;
+  font-family: "Heebo", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(71, 131, 241);
+}
+
+#siteMenu1 > a:hover,
+#siteMenu2 > a:hover,
+#siteMenu3 > a:hover {
+  background-color: white;
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+}
+
+ul {
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+}
+
+li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+#refreshBtn {
+  border: 0;
+  outline: 0;
+  grid-column: 1;
+  grid-row: 3;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  font-family: "Heebo", sans-serif;
+}
+
+#showAll,
+#btnFindPs {
+  border: 0;
+  outline: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  font-family: "Heebo", sans-serif;
+}
+
+#submitButton:hover,
+#refreshBtn:hover,
+#btnFindPs:hover,
+#search:hover,
+#showAll:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+  grid-row: 2;
+  margin: 10px;
+}
+#submitButton {
+  border: 0;
+  outline: 0;
+  width: 8em;
+  height: 2em;
+  margin: 10px 5em;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  font-family: "Heebo", sans-serif;
+}
+#infoBox {
+  grid-column: 1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 5px 5px 5px rgb(141, 98, 223);
+  padding: 1em;
+  margin: 10px;
+}
+#cityText {
+  height: 1.5em;
+  margin-left: 2.95em;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#cityId {
+  height: 1.5em;
+  margin-left: 4.1em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#cityPop {
+  height: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#select {
+  height: 2em;
+  width: 10em;
+  border-radius: 10px;
+  cursor: pointer;
+}

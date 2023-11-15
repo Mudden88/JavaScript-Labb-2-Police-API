@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polisens Händelser - I ett tilltalande format</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Heebo:wght@100;200;300;400;500;600;800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <nav id="navbar">
+      <h1 id="police">Polis</h1>
+
+      <h2 id="events">Händelser</h2>
+      <img id="policeImg" src="./media/police-icon-29952.png" alt="">
+      <ul id="listLinks">
+        <li id="siteMenu1"><a href="index.html">Hem</a></li>
+        <li id="siteMenu2"><a href="find.html">Sök Station</a></li>
+        <li id="siteMenu3"><a href="cities.html">Cities</a></li>
+      </ul>
+
+
+    </nav>
+
+    <main id="main">
+
+
+      <section id="searchSection">
+        <select id="myMenu">
+          <option value="choice">Hela Sverige</option>
+          <option value="gbg">Göteborg</option>
+          <option value="sthlm">Stockholm</option>
+          <option value="mlmoe">Malmö</option>
+        </select>
+        <button id="search">Sök</button>
+
+      </section>
+      <div id="resultBox"></div>
+      <!-- Chart  -->
+      <div id="canvasChart">
+        <canvas id="myChart"></canvas>
+      </div>
+
+
+    </main>
+
+  </div>
+</body>
+
+</html>

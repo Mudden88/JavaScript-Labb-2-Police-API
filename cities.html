@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polisens Händelser - I ett tilltalande format</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Heebo:wght@100;200;300;400;500;600;800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="cities.js" defer></script>
+</head>
+
+<body>
+  <div id="container">
+
+    <nav id="navbar">
+
+      <h1 id="police">Polis</h1>
+      <p id="events">Händelser</p>
+      <img id="policeImg" src="./media/police-icon-29952.png" alt="">
+
+      <ul id="listLinks">
+        <li id="siteMenu1"><a href="index.html">Hem</a></li>
+        <li id="siteMenu2"><a href="find.html">Sök Station</a></li>
+        <li id="siteMenu3"><a href="cities.html">Cities</a></li>
+      </ul>
+
+
+    </nav>
+
+    <main id="main">
+      <div id="infoBox">
+        <p>Här kan du ändra, lägga till eller ta bort städer i Cities Tjänsten</p>
+        <p>Använd ID för att ta bort eller ändra en stad</p>
+      </div>
+
+      <form id="form">
+
+        <legend>Stad:
+          <input type="text" name="city" id="cityText">
+        </legend>
+
+        <legend>Population:
+          <input type="text" name="city" id="cityPop">
+        </legend>
+        <legend>ID: <input type="text" name="cityId" id="cityId"></legend>
+        <legend>Vad vill du göra:
+          <select name="select" id="select">
+            <option value="Lägg till" id="add">Lägg till</option>
+            <option value="Ta bort" id="remove">Ta bort</option>
+            <option value="Ändra" id="change">Ändra</option>
+          </select>
+        </legend>
+        <button type="submit" id="submitButton">Skicka</button>
+
+      </form>
+
+      <button id="refreshBtn">Uppdatera</button>
+      <div id="showCities"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+  </div>
+</body>
+
+</html>
