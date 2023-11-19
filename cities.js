@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   fetchCities()
 
@@ -64,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchCities()
     }, "1000");
   })
-
 })
+
 
 //Funktion som hämtar städer
 function fetchCities() {
@@ -80,9 +79,9 @@ function fetchCities() {
 
       for (let i = 0; i < result.length; i++) {
 
-        resultDiv.innerHTML += "<div id='divClone'>" + "<p id='idNo'> ID: " + result[i].id + "<p id='cityName'> Namn: " + result[i].name + "<p id='pop'> Population: " + result[i].population + "</div>"
+        resultDiv.innerHTML += "<div id='divClone'>" + "<p id='idNo'> ID: " +
+          result[i].id + "<p id='cityName'> Namn: " + result[i].name +
+          "<p id='pop'> Population: " + result[i].population + "</div>"
       }
-
-
     })
 }

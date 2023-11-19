@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  //Funktioner för localStorage, hämta stationer och textruta som dyker upp vid sökfält.
   storageOutput()
   getStations()
   msgbox()
 
-  let button = document.getElementById('btnFindPs')
-  let showAll = document.getElementById('showAll')
+  const button = document.getElementById('btnFindPs')
+  const showAll = document.getElementById('showAll')
 
   //Array för localstorage
-  let itemValues = []
+  const itemValues = []
 
   button.addEventListener('click', () => {
 
     //Här sparas inmatningen från userInput i itemValues arrayen.
     //itemValues sparas i localStorage för att kunna visas upp senare.
-    let userInput = document.getElementById('search-Ps')
+    const userInput = document.getElementById('search-Ps')
 
     itemValues.push(userInput.value)
     localStorage.setItem('search', JSON.stringify(itemValues))
@@ -30,8 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+const userInput = document.getElementById('search-Ps')
+const apiUrl = 'https://polisen.se/api/policestations'
+const parsedValues = JSON.parse(localStorage.getItem('search'))
+
+//Funktion som listar alla polisstationer.
 function listAll() {
-  fetch('https://polisen.se/api/policestations')
+  fetch(apiUrl)
     .then(response => response.json())
     .then(result => {
       resultStations.innerHTML = ""
@@ -55,10 +61,9 @@ function listAll() {
 
 // Funktion som hämtar de första 20 polisstationerna och presenterar
 //dessa i varsin div.
-
 function getStations() {
   //Hämtar händelser ifrån API
-  fetch('https://polisen.se/api/policestations')
+  fetch(apiUrl)
     .then(response => response.json())
     .then(result => {
       resultStations.innerHTML = ""
@@ -77,26 +82,26 @@ function getStations() {
     })
 }
 
+//Funktion för localStorage
 function storageOutput() {
+
   let webStore = document.getElementById('webStore')
 
-  let parsedValues = JSON.parse(localStorage.getItem('search'))
   for (let i = 0; i < parsedValues.length; i++) {
     webStore.innerHTML = "<h2>Senaste sökningar: </h2>"
     webStore.innerHTML += "<p>" + parsedValues
   }
 }
 
+//Funktion för att söka på polisstation.
 function searchPS() {
-  let webStore = document.getElementById('webStore')
 
-  let parsedValues = JSON.parse(localStorage.getItem('search'))
   for (let i = 0; i < parsedValues.length; i++) {
     webStore.innerHTML = "<h2>Senaste sökningar: </h2>"
     webStore.innerHTML += "<p>" + parsedValues
   }
 
-  fetch('https://polisen.se/api/policestations')
+  fetch(apiUrl)
     .then(response => response.json())
     .then(result => {
 
@@ -137,21 +142,19 @@ function searchPS() {
 //Funktion som visar en ruta med text när man hovrar över sökrutan.
 // rutan med text försvinner när man trycker på hitta knappen.
 // samtliga element och text skapas i funktionen.
-
 function msgbox() {
-  let main = document.getElementById('mainFind')
-  let info = document.createElement('p')
+  const main = document.getElementById('mainFind')
+  const info = document.createElement('p')
+  const userInput = document.getElementById('search-Ps')
+
   info.setAttribute('id', 'infoText')
   main.appendChild(info)
-  let txt = document.createTextNode(
+  const txt = document.createTextNode(
     'Skriv in stad för att söka polisstation. Klicka i textrutan för att stänga detta meddelande'
   )
   info.appendChild(txt)
 
-  let userInput = document.getElementById('search-Ps')
-
   //Gömmer elementet i CSS tills eventet startas.
-
   userInput.addEventListener('mouseover', () => {
     document.getElementById('infoText').style.display = "inline"
   })
