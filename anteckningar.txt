@@ -1,0 +1,55 @@
+
+
+
+Genomgång av labb 2 - 30/10-2023
+
+- Informationen spelas in.
+Lägg inte ner för mycket tid på HTML / CSS, fokus ligger på JavaScript.
+
+- Fixa kraven för godkänt först. Därefter kan man börja utveckla för VG.
+
+skiss / färgpallett är inte ett krav.
+(Kan vara bra att göra för sin egna del).
+
+Sök på ifall man inte hittar något från github-listan "json public web api".
+
+-Se till att testa APIn  först så det inte uppstår CORS-Problem. Använd fetch eller axios. Lita inte på github listan.
+
+-Minst 2st HTML filer skall användas. Navigeras med länkar. Båda webbsidor ska innehålla JavaScript.
+
+- Minst 10 värden ska visas upp. Måste vara interaktivt i form av att event hanteras på ett meningsfullt sätt.
+
+- JavaScript ramverk som tex  (Vue.js eller React) eller jQuery får INTE användas. (Enbart Vanilla JavaScript)
+
+-Chart.js ska nyttjas för att visualisera data, tex statistik eller diagram som hämtas från en webbtjänst som INTE är Cities tjänsten (VG)
+
+-Web storage, minst ett värde. Får inte ha med cities tjänsten att göra. (VG)
+
+- Enhetlig och snyggt formatterad kod. D-R-Y (VG)
+
+-Valfritt att göra spel, som gissningsspel, yatzy eller videopoker etc. Finns tid till detta kan man göra det. (VG)
+
+- Projektet ska redovisas via en inspelad video.
+
+Redovisningen måste innehålla:
+1. En demonstration av webbplatsen via en browser.
+
+2. En demonstration via insomnia eller liknande av JSON-data som tas emot.
+
+3. En demonstration av sin JavaScript-kod. Även HTML och CSS -kod kan visas upp, men presentationen ska kretsa kring JavaScript kod.
+
+HÅLL ER INOM : 4,5 minuter till 5,5 minuter lång redovisning, annars underkänd.
+
+Presentationen ska vara på svenska.
+
+'OBS Studio' kan användas för att spela in video.
+
+
+- Videon skickas till vanja via OneDrive senast 16:00 13 November! namnge videofilen med "Förnamn Efternamn".
+
+Redovisningen bedöms inte på om projektet är klart eller inte.
+Man ska enbart redogöra hur långt man har kommit på 2 veckor.
+
+Koden ska lämnas in i en .zip fil, via ITHS Distans senast 23:59 Söndag 19 November!
+
+Publicering av webbplatsen behövs inte göra.
